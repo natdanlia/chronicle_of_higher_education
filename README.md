@@ -1,24 +1,25 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby version: 2.6.0
 
-Things you may want to cover:
+To start the app locally:
 
-* Ruby version
+        bundle install
+        
+        rake db:migrate
+  
+        rake db: seed
+        
+        rails s
 
-* System dependencies
+The app has been deployed on heroku https://chronicle-of-higher-education.herokuapp.com/api/v1/orders
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The end points are 
+      
+      /api/v1/menu 
+      
+      /api/v1/items
+      
+      /api/v1/orders
+      
+      /api/v1/orders/:id
