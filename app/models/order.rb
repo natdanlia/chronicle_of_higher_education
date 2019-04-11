@@ -1,3 +1,4 @@
 class Order < ApplicationRecord
-  belongs_to :item
+  has_many :items
+  has_many :pizza_types, through: :items
 end
