@@ -15,6 +15,13 @@ margherita =  PizzaType.create(name: "Margherita", price: 11.99)
 cheese = PizzaType.create(name: "Cheese", price: 10.60)
 florentine = PizzaType.create(name: "Florentine", price: 13.75)
 meat_lovers = PizzaType.create(name: "Meat Lovers", price: 14.50)
+the_farmers_market = PizzaType.create(name: "The Farmer’s Market", price: 15.10)
+taco = PizzaType.create(name: "Taco", price: 16.75)
+chicken_bbq = PizzaType.create(name: "Chicken BBQ", price: 14.50)
+hawaiian = PizzaType.create(name: "Hawaiian", price: 15.10)
+venezia = PizzaType.create(name: "Venezia", price: 17.75)
+veggie_lovers = PizzaType.create(name: "Veggie Lovers", price: 14.50)
+
 
 item1 = Item.create(quantity: 4, order: order1, pizza_type: pepperoni)
 item2 = Item.create(quantity: 1, order: order1, pizza_type: cheese)
