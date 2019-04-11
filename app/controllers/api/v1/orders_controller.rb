@@ -1,4 +1,6 @@
 class Api::V1::OrdersController < ApplicationController
+
+  before_action :validate_request_parameters, only: [:create]
   def index
     @orders = Order.all
 
@@ -10,14 +12,22 @@ class Api::V1::OrdersController < ApplicationController
     render json: @order
   end
 
+
+
   def create
-    @order = Order.create()
+    @order = Order.new()
     #byebug
+      if @order.save
+        request.parameters["items"].each do |item|
+          Item.create(quantity: item["quantity"] ,pizza_type_id: item["pizza_type_id"], order: @order)
+        end
+      else
+        render json: @order.errors, status: :unprocessable_entity
+      end
+  end
 
-    request.parameters["items"].each do |item|
-      Item.create(quantity: item["quantity"] ,pizza_type_id: item["pizza_type_id"], order: @order)
-    end
-
+  def validate_request_parameters
+    return false unless request.parameters["items"].length > 0
   end
 
   # def order_params
