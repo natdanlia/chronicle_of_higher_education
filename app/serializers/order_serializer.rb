@@ -1,7 +1,7 @@
 class OrderSerializer < ActiveModel::Serializer
   attributes :id, :total_price, :total_price_after_tax
   has_many :items
-  has_many :pizza_types, through: :items
+  # has_many :pizza_types, through: :items
 
 
   def total_price

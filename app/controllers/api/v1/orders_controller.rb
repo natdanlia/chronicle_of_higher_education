@@ -20,8 +20,8 @@ class Api::V1::OrdersController < ApplicationController
 
   end
 
-  def order_params
-    params.permit(items: [:quantity,:pizza_type_id])
-  end
+  # def order_params
+  #   params.permit(items: [:quantity,:pizza_type_id])
+  # end
 
 end
