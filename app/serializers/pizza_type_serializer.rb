@@ -1,4 +1,4 @@
 class PizzaTypeSerializer < ActiveModel::Serializer
-  attributes :name, :price
+  attributes :id, :name, :price
 
 end

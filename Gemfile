@@ -18,7 +18,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'active_model_serializers'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
-
+gem 'rspec', '~> 3.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -39,6 +39,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
    gem 'rb-readline'
+   gem 'rspec-rails', '~> 3.5'
 end
 
 

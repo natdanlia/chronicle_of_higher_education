@@ -2,7 +2,12 @@ class Api::V1::ItemsController < ApplicationController
 
   def index
     @items = Item.all
-    render json: @items
+    render json: @items, status: 200
+  end
+
+  def show
+    @item = Item.all.find_by_id(params[:id])
+    render json: @item, status: 200
   end
 
   def create
@@ -18,10 +23,7 @@ class Api::V1::ItemsController < ApplicationController
     end
   end
 
-    # Use callbacks to share common setup or constraints between actions.
 
-
-    # Only allow a trusted parameter "white list" through.
     def item_params
       params.require(:item).permit(:order_id, :pizza_type_id, :quantity)
     end

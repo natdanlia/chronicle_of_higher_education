@@ -9,8 +9,7 @@ Rails.application.routes.draw do
 
         get '/menu', to: 'pizza_types#index'
         get "*path", to: redirect('/api/v1/menu')
-        # match '*path', via: :all, to: redirect('/api/v1/menu')
-        # get 'orders/total_price', to: 'orders#total_price', :as => 'jin'
+  
     end
   end
 
