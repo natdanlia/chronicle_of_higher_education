@@ -3,9 +3,9 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-        resources :items
-        resources :orders
-        resources :pizza_types
+        resources :items, only: [:index, :show, :create]
+        resources :orders, only: [:index, :show, :create]
+        resources :pizza_types, only: [:index]
 
         get '/menu', to: 'pizza_types#index'
         get "*path", to: redirect('/api/v1/menu')
